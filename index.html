@@ -3,12 +3,13 @@ layout: home
 title: Links
 description: All my links, projects, and ways to support.
 ---
-<section class="links-hub">
+<section class="links-hub" data-filter-scope>
   <div class="links-intro">
     {% if site.author %}
       <h1>{{ site.author }}</h1>
     {% endif %}
     <p>{{ site.description }}</p>
+    <input class="filter-search" type="search" placeholder="Search links…" data-filter-search aria-label="Search links">
   </div>
 
   {% for category in site.data.links %}
@@ -16,9 +17,11 @@ description: All my links, projects, and ways to support.
       <h2>{{ category[0] }}</h2>
       <div class="link-grid">
         {% for link in category[1] %}
-          {% include link-card.html link=link index=forloop.index0 %}
+          {% include link-card.html link=link index=forloop.index0 category=category[0] %}
         {% endfor %}
       </div>
     </div>
   {% endfor %}
 </section>
+
+{% include filter-js.html %}

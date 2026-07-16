@@ -26,6 +26,12 @@ plugins:
   - jekyll-feed                 # RSS (metadata extraction)
   - jekyll-sitemap              # SEO
   - jekyll-redirect-from        # future-proofing
+
+# Items excluded from sitemap.xml (404 / drafts)
+sitemap:
+  exclude:
+    - /404.html
+    - /drafts/
 # NOTE: rouge is built into Jekyll; no plugin entry needed.
 # Avoid non-allowlisted gems (e.g. jekyll-archives) or Pages build fails.
 

@@ -1,4 +1,6 @@
-<a class="project-card" href="{{ project.url | relative_url }}">
+<a class="project-card" href="{{ project.url | relative_url }}"
+   data-search="{{ project.title | downcase }} {{ project.tagline | downcase }} {{ project.category | downcase }} {{ project.tags | join: ' ' | downcase }}"
+   data-category="{{ project.category | slugify }}">
   {% if project.image %}
     <img class="thumb" src="{{ project.image | relative_url }}" alt="{{ project.title }}" loading="lazy">
   {% endif %}

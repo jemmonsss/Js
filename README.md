@@ -7,11 +7,14 @@ gallery.
 ## Features
 
 - **Links hub** — edit `_data/links.yml` to add/remove links (no code changes).
+  Includes a client-side search box.
 - **Projects gallery** — add a Markdown file under `_projects/` to publish a
-  project with its own page.
+  project with its own page. Filter by category (tabs) and search by title/tag.
 - Dark-gray + purple theme, fully responsive, self-hosted SCSS (no CDN build deps).
-- Automated SEO (`jekyll-seo-tag`), RSS (`jekyll-feed`), and `sitemap.xml`
-  (`jekyll-sitemap`).
+- Automated SEO: `jekyll-seo-tag` (OG/Twitter + **Person JSON-LD**),
+  RSS (`jekyll-feed`), `sitemap.xml` (`jekyll-sitemap`, with 404/drafts
+  excluded), and `robots.txt`.
+- Favicon set (PNG + SVG + Apple Touch icon).
 - Auto-build + deploy on every push to `main`.
 
 ## Local development
@@ -39,10 +42,21 @@ Socials:
 Each entry supports one of `icon` (FontAwesome class), `image` (URL), or `svg`
 (raw HTML).
 
-### A project
+### Redirects (old/renamed URLs)
 
-Copy `templates/project-template.md` to `_projects/<slug>.md` and fill in the
-front matter. The gallery and a per-project page are generated automatically.
+`jekyll-redirect-from` is enabled. Add to any page/project front matter:
+
+```yaml
+redirect_from:
+  - /old-url/
+  - /projects/old-slug/
+```
+
+### Search & filtering
+
+Both the links hub and projects page have a search box (client-side, no plugin).
+Projects additionally show category filter tabs. Cards carry `data-search` /
+`data-category` attributes consumed by `_includes/filter-js.html`.
 
 ## Deployment
 

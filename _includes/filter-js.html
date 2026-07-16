@@ -1,0 +1,36 @@
+<script>
+(function () {
+  function initFilter(scope) {
+    var box = scope.querySelector('[data-filter-search]');
+    var tabs = scope.querySelectorAll('[data-filter-tab]');
+    var cards = scope.querySelectorAll('[data-search]');
+
+    function apply() {
+      var q = (box ? box.value : '').trim().toLowerCase();
+      var active = scope.querySelector('[data-filter-tab].active');
+      var cat = active ? active.getAttribute('data-filter-tab') : 'all';
+
+      cards.forEach(function (card) {
+        var text = card.getAttribute('data-search') || '';
+        var cardCat = card.getAttribute('data-category') || '';
+        var matchQ = !q || text.indexOf(q) !== -1;
+        var matchC = cat === 'all' || cardCat === cat;
+        card.style.display = (matchQ && matchC) ? '' : 'none';
+      });
+    }
+
+    if (box) box.addEventListener('input', apply);
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        tabs.forEach(function (t) { t.classList.remove('active'); });
+        tab.classList.add('active');
+        apply();
+      });
+    });
+
+    apply();
+  }
+
+  document.querySelectorAll('[data-filter-scope]').forEach(initFilter);
+})();
+</script>

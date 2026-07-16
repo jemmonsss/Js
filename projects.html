@@ -3,9 +3,21 @@ layout: gallery
 title: Projects
 description: Free and public web apps and tools I've built.
 ---
-<section class="gallery-header">
+<section class="gallery-header" data-filter-scope>
   <h1>Projects</h1>
   <p>Free and public web apps &amp; tools.</p>
+
+  <input class="filter-search" type="search" placeholder="Search projects…" data-filter-search aria-label="Search projects">
+
+  <div class="filter-tabs">
+    <button class="filter-tab active" data-filter-tab="all" type="button">All</button>
+    {% assign cats = site.projects | map: 'category' | uniq %}
+    {% for cat in cats %}
+      {% if cat and cat != '' %}
+        <button class="filter-tab" data-filter-tab="{{ cat | slugify }}" type="button">{{ cat }}</button>
+      {% endif %}
+    {% endfor %}
+  </div>
 </section>
 
 <section class="gallery-grid">
@@ -14,3 +26,5 @@ description: Free and public web apps and tools I've built.
     {% include project-card.html project=project %}
   {% endfor %}
 </section>
+
+{% include filter-js.html %}

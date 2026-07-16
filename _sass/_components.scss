@@ -26,12 +26,61 @@
 
 .btn-primary:hover { color: #fff; }
 
+.filter-search {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  margin: 1rem auto 0;
+  padding: .6rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-elev);
+  color: var(--text);
+  font-size: .95rem;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.filter-search:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 18px var(--purple-glow);
+}
+
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.filter-tab {
+  padding: .4rem .9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-elev);
+  color: var(--text-dim);
+  font-size: .85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color .15s ease, color .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+.filter-tab:hover { color: var(--purple-2); border-color: var(--purple); }
+
+.filter-tab.active {
+  background: var(--purple);
+  color: #fff;
+  border-color: var(--purple);
+  box-shadow:0 0 18px var(--purple-glow);
+}
+
 .tag-pill {
   display: inline-block;
   font-size: .72rem;
   color: var(--text-dim);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: .1rem .5rem;
-  margin: .15rem .25rem .15rem 0;
+  border:1px solid var(--border);
+  border-radius:999px;
+  padding:.1rem .5rem;
+  margin:.15rem .25rem .15rem 0;
 }
