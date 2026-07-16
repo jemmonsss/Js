@@ -1,7 +1,9 @@
 # ---- Core site ----
-title: J Emmons
-description: Personal portfolio — links and free/public web tools.
-author: J Emmons
+# Primary username everywhere: J_emmons_07
+# "jemmonsss" is ONLY the GitHub handle / org (github.com/jemmonsss).
+title: J_emmons_07
+description: Links, projects, and free/public web tools by J_emmons_07.
+author: J_emmons_07
 url: "https://jemmonsss.github.io"
 baseurl: "/Js"                  # "" for a user/org site, "/repo" for project site
 lang: en-US
@@ -36,11 +38,13 @@ sitemap:
 # Avoid non-allowlisted gems (e.g. jekyll-archives) or Pages build fails.
 
 # ---- SEO / social (consumed by jekyll-seo-tag) ----
+# NOTE: "jemmonsss" is the GitHub handle only. Primary username is J_emmons_07.
 social:
-  name: J Emmons
+  name: J_emmons_07
   links:
     - https://github.com/jemmonsss
-    - https://www.youtube.com/@jemmonsss
+    - https://www.youtube.com/@J_emmons_07
+    - https://www.tiktok.com/@J_emmons_07
 
 # jekyll-seo-tag site-wide defaults
 twitter:
@@ -50,13 +54,14 @@ logo: /images/logo.png
 og_image: /images/logo.png
 
 # Defaults applied automatically (less front-matter repetition)
+# No `image` fallback: project cards use a live <iframe> preview of the
+# actual site when no screenshot is provided.
 defaults:
   - scope:
       path: ""
       type: projects
     values:
       layout: default
-      image: /images/projects/knolagebase.png
 
 # ---- Theme / assets ----
 sass:

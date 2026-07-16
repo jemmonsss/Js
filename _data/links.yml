@@ -1,17 +1,44 @@
+# Links hub data — edit this file to add/remove links (no code changes).
+# Primary username: J_emmons_07
+# "jemmonsss" is used ONLY as the GitHub handle / GitHub Pages org.
+
 Socials:
+  - title: TikTok
+    url: https://www.tiktok.com/@J_emmons_07
+    icon: fa-brands fa-tiktok
+  - title: YouTube — J_emmons_07
+    url: https://www.youtube.com/@J_emmons_07
+    icon: fa-brands fa-youtube
+  - title: YouTube — GrandoMs
+    url: https://www.youtube.com/@grandom_1
+    icon: fa-brands fa-youtube
   - title: GitHub
     url: https://github.com/jemmonsss
     icon: fa-brands fa-github
-  - title: YouTube
-    url: https://youtube.com/@jemmonsss
-    icon: fa-brands fa-youtube
+  - title: Scratch
+    url: https://scratch.mit.edu/users/jemmons/
+    image: https://scratch.mit.edu/favicon.ico
 
-Projects:
+My Projects:
+  - title: Js-Scripts (FiveM)
+    url: https://jemmonsss.github.io/Js-Store
+    icon: fa-solid fa-gamepad
+  - title: GitHub Repositories
+    url: https://github.com/jemmonsss?tab=repositories
+    icon: fa-brands fa-github
+  - title: My Affiliate Links
+    url: https://jemmonsss.github.io/Js-Affliatelinks
+    icon: fa-solid fa-tags
   - title: Knolagebase
     url: /Js/projects/
     icon: fa-solid fa-book-open
 
+Gaming:
+  - title: Star Citizen Referral Code
+    url: https://www.robertsspaceindustries.com/enlist?referral=STAR-3QC6-3B2F
+    icon: fa-solid fa-rocket
+
 Support:
-  - title: Buy me a coffee
-    url: https://buymeacoffee.com/jemmonsss
+  - title: Support me :)
+    url: https://buymeacoffee.com/j_emmons_07
     icon: fa-solid fa-heart

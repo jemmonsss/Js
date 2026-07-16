@@ -12,7 +12,8 @@ url: https://jemmonsss.github.io/Js-Knolagebase/
 repo: https://github.com/jemmonsss/Js-Knolagebase
 featured: true
 date: 2026-07-16
-image: /images/projects/knolagebase.png
+# image field intentionally omitted: the card shows a live <iframe> preview
+# of the actual site (https://jemmonsss.github.io/Js-Knolagebase/).
 accent: "#a855f7"
 layout: default
 ---
