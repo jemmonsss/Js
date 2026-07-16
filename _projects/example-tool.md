@@ -1,13 +1,15 @@
 ---
-title: "Example Tool"
-tagline: "A free web app that does X."
+title: "Knolagebase"
+tagline: "A free knowledge base for organizing and sharing what you learn."
 description: >-
-  Longer summary used for the project page and SEO/meta extraction.
+  Knolagebase is a free, public web app for building a personal knowledge
+  base — capture notes, link ideas together, and search everything from one
+  place. No account required to browse.
 category: Web App
-tags: [free, tool, automation]
+tags: [free, tool, knowledge, notes]
 status: live              # live | beta | archived
-url: https://example.com
-repo: https://github.com/yourname/example-tool
+url: https://jemmonsss.github.io/Js-Knolagebase/
+repo: https://github.com/jemmonsss/Js-Knolagebase
 featured: true
 date: 2026-07-16
 image: /images/projects/example-tool.png
@@ -20,6 +22,10 @@ layout: default
   <p class="tagline">{{ page.tagline }}</p>
 
   {{ content }}
+
+  Knolagebase helps you turn scattered notes into a connected, searchable
+  knowledge base. Add entries, link related topics, and revisit what you've
+  learned — all from a clean, fast web interface.
 
   <div class="links">
     {% if page.url and page.url != empty %}
