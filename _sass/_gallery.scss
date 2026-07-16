@@ -45,11 +45,13 @@
   overflow: hidden;
   background: var(--bg-elev-2);
   border: none;
+  container-type: inline-size;    /* enables cqw units for the scale below */
 }
 
 /* Fixed 1920x1080 "desktop" render of the live site, scaled down to fit the
-   card box. `scale` (percentage) shrinks the 1920px-wide stage to the box
-   width, so it stays crisp and correctly proportioned at any card size. */
+   card box. 100cqw = the box width; dividing by 1920px gives a unitless
+   scale factor, so the 1920x1080 stage shrinks to the box while the 16:9
+   ratio (and crispness) is preserved at any card size. */
 .project-card .thumb-frame {
   position: absolute;
   top: 0;
@@ -58,7 +60,7 @@
   height: 1080px;
   border: none;
   transform-origin: top left;
-  scale: calc(100% / 1920);      /* = boxWidth / 1920 -> fits width, 16:9 preserved */
+  transform: scale(calc(100cqw / 1920px));
   pointer-events: none;           /* preview is display-only */
 }
 
