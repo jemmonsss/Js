@@ -1,0 +1,8 @@
+CategoryName:
+  - title: Label
+    url: https://example.com
+    icon: fa-solid fa-rocket
+  # Icon modes (pick one per entry):
+  # - icon:  fa-brands fa-github      (FontAwesome class)
+  # - image: https://.../icon.png     (image URL)
+  # - svg:   '<img src="..." onerror="...">'  (raw HTML injected directly)

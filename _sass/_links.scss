@@ -1,0 +1,88 @@
+.links-hub {
+  padding: 2rem 0 1rem;
+}
+
+.links-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.links-intro .avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  border: 2px solid var(--purple);
+  box-shadow: 0 0 22px var(--purple-glow);
+}
+
+.links-intro h1 {
+  font-size: 1.8rem;
+}
+
+.links-intro p {
+  color: var(--text-dim);
+  margin: 0;
+}
+
+.link-category {
+  margin-bottom: 2rem;
+}
+
+.link-category h2 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+
+.link-grid {
+  display: grid;
+  gap: .85rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .9rem 1.1rem;
+  color: var(--text);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  animation: fadeInUp .5s ease both;
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--purple);
+  box-shadow: 0 0 22px var(--purple-glow);
+  text-decoration: none;
+}
+
+.link-card .icon {
+  font-size: 1.4rem;
+  color: var(--purple-2);
+  width: 1.6rem;
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.link-card .icon img {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 6px;
+}
+
+.link-card .label {
+  font-weight: 600;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

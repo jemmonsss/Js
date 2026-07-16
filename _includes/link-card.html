@@ -1,0 +1,13 @@
+<a class="link-card" href="{{ link.url }}" target="_blank" rel="noopener"
+   style="animation-delay: {{ index | times: 0.06 }}s">
+  <span class="icon">
+    {% if link.icon %}
+      <i class="{{ link.icon }}"></i>
+    {% elsif link.image %}
+      <img src="{{ link.image }}" alt="{{ link.title }}" loading="lazy">
+    {% elsif link.svg %}
+      {{ link.svg }}
+    {% endif %}
+  </span>
+  <span class="label">{{ link.title }}</span>
+</a>

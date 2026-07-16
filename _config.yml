@@ -1,0 +1,50 @@
+# ---- Core site ----
+title: Your Name
+description: Personal portfolio — links and free/public web tools.
+author: Your Name
+url: "https://yourname.github.io"
+baseurl: "/portfolio"            # "" for a user/org site, "/repo" for project site
+lang: en-US
+timezone: UTC
+
+# ---- Build ----
+markdown: kramdown
+encoding: utf-8
+highlighter: rouge              # syntax highlighting
+excerpt_separator: "\n\n"
+permalink: pretty
+
+# ---- Collections: Projects gallery ----
+collections:
+  projects:
+    output: true                # generate a page per project
+    permalink: /projects/:slug/
+
+# ---- Plugins (GitHub-Pages safe only) ----
+plugins:
+  - jekyll-seo-tag              # automated metadata / OG tags
+  - jekyll-feed                 # RSS (metadata extraction)
+  - jekyll-sitemap              # SEO
+  - jekyll-redirect-from        # future-proofing
+# NOTE: rouge is built into Jekyll; no plugin entry needed.
+# Avoid non-allowlisted gems (e.g. jekyll-archives) or Pages build fails.
+
+# ---- SEO / social (consumed by jekyll-seo-tag) ----
+social:
+  name: Your Name
+  links:
+    - https://github.com/yourname
+    - https://www.youtube.com/@yourname
+# logo/twitter handled by jekyll-seo-tag via page.front-matter or site defaults
+
+# ---- Theme / assets ----
+sass:
+  style: compressed             # minify CSS in production
+include:
+  - _projects
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - templates                   # authoring templates, not published

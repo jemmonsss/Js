@@ -1,0 +1,17 @@
+Socials:
+  - title: GitHub
+    url: https://github.com/yourname
+    icon: fa-brands fa-github
+  - title: YouTube
+    url: https://youtube.com/@yourname
+    icon: fa-brands fa-youtube
+
+Projects:
+  - title: My Tools
+    url: https://yourname.github.io/portfolio/projects/
+    icon: fa-solid fa-toolbox
+
+Support:
+  - title: Buy me a coffee
+    url: https://buymeacoffee.com/yourname
+    icon: fa-solid fa-heart

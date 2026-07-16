@@ -1,0 +1,16 @@
+---
+layout: gallery
+title: Projects
+description: Free and public web apps and tools I've built.
+---
+<section class="gallery-header">
+  <h1>Projects</h1>
+  <p>Free and public web apps &amp; tools.</p>
+</section>
+
+<section class="gallery-grid">
+  {% assign sorted = site.projects | sort: 'date' | reverse %}
+  {% for project in sorted %}
+    {% include project-card.html project=project %}
+  {% endfor %}
+</section>

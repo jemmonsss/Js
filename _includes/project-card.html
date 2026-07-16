@@ -1,0 +1,13 @@
+<a class="project-card" href="{{ project.url | relative_url }}">
+  {% if project.image %}
+    <img class="thumb" src="{{ project.image | relative_url }}" alt="{{ project.title }}" loading="lazy">
+  {% endif %}
+  <div class="body">
+    <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+    {% if project.tagline %}<p class="tagline">{{ project.tagline }}</p>{% endif %}
+    <div class="meta">
+      <span class="badge {{ project.status }}">{{ project.status | default: 'live' }}</span>
+      {% if project.category %}<span class="category">{{ project.category }}</span>{% endif %}
+    </div>
+  </div>
+</a>
