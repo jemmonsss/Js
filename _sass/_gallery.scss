@@ -31,11 +31,35 @@
 
 .project-card .thumb {
   width: 100%;
-  aspect-ratio:16 / 9;
-  object-fit:cover;
-  background:var(--bg-elev-2);
-  border:none;
-  pointer-events:none;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--bg-elev-2);
+  border: none;
+  pointer-events: none;
+}
+
+.project-card .thumb-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;          /* keep the box a fixed 16:9 card thumbnail */
+  overflow: hidden;
+  background: var(--bg-elev-2);
+  border: none;
+}
+
+/* Fixed 1920x1080 "desktop" render of the live site, scaled down to fit the
+   card box. `scale` (percentage) shrinks the 1920px-wide stage to the box
+   width, so it stays crisp and correctly proportioned at any card size. */
+.project-card .thumb-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1080px;
+  border: none;
+  transform-origin: top left;
+  scale: calc(100% / 1920);      /* = boxWidth / 1920 -> fits width, 16:9 preserved */
+  pointer-events: none;           /* preview is display-only */
 }
 
 .project-card .body { padding: 1rem 1.1rem 1.2rem; flex: 1; }

@@ -4,14 +4,18 @@
   {% if project.image %}
     <img class="thumb" src="{{ project.image | relative_url }}" alt="{{ project.title }}" loading="lazy">
   {% elsif project.live_url %}
-    {# Live preview of the actual external site (live_url).
+    {% comment %} Live preview of the actual external site (live_url).
        No `sandbox` attribute: a sandbox combining allow-scripts + allow-same-origin
        triggers an "escape its sandboxing" warning, and allow-same-origin alone
        blocks the framed site's scripts ("Blocked script execution"). Since this is
        a first-party preview (your own site under jemmonsss.github.io), we omit
        the sandbox so scripts run and no console warnings appear. The card itself
-       is non-interactive via `pointer-events:none` in CSS. #}
-    <iframe class="thumb" src="{{ project.live_url }}" title="{{ project.title }}" loading="lazy"></iframe>
+       is non-interactive via `pointer-events:none` in CSS.
+       The iframe is rendered at a fixed 1920x1080 "desktop" stage and CSS-scaled
+       down to fit the card box while keeping the 16:9 ratio. {% endcomment %}
+    <div class="thumb-stage">
+      <iframe class="thumb-frame" src="{{ project.live_url }}" title="{{ project.title }}" loading="lazy"></iframe>
+    </div>
   {% endif %}
   <div class="body">
     <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
