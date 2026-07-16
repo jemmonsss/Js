@@ -1,15 +1,15 @@
 Socials:
   - title: GitHub
-    url: https://github.com/yourname
+    url: https://github.com/jemmonsss
     icon: fa-brands fa-github
   - title: YouTube
     url: https://youtube.com/@yourname
     icon: fa-brands fa-youtube
 
 Projects:
-  - title: My Tools
-    url: /Js/projects/
-    icon: fa-solid fa-toolbox
+  - title: Knolagebase
+    url: https://jemmonsss.github.io/Js-Knolagebase/
+    icon: fa-solid fa-book-open
 
 Support:
   - title: Buy me a coffee

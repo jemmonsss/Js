@@ -14,6 +14,7 @@ featured: true
 date: 2026-07-16
 accent: "#a855f7"
 layout: default
+redirect_to: https://jemmonsss.github.io/Js-Knolagebase/
 ---
 
 <article class="project-page">
