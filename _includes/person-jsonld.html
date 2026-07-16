@@ -5,7 +5,7 @@
   "name": {{ site.author | jsonify }},
   "url": {{ site.url | append: site.baseurl | jsonify }},
   "description": {{ site.description | jsonify }},
-  "image": {{ site.logo | relative_url | absolute_url | jsonify }},
+  "image": {{ site.logo | absolute_url | jsonify }},
   "sameAs": {{ site.social.links | default: [] | jsonify }}
 }
 </script>

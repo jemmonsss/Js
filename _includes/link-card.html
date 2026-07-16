@@ -1,6 +1,6 @@
 <a class="link-card" href="{{ link.url }}" target="_blank" rel="noopener"
    style="animation-delay: {{ index | times: 0.06 }}s"
-   data-search="{{ link.title | downcase }} {{ category | downcase }}">
+   data-search="{{ link.title | downcase }} {{ link_category | downcase }}">
   <span class="icon">
     {% if link.icon %}
       <i class="{{ link.icon }}"></i>

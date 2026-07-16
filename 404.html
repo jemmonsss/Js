@@ -21,11 +21,12 @@ permalink: /404.html
 {% if site.data.links %}
 <section class="links-hub" style="padding-top:1rem">
   {% for category in site.data.links %}
+    {% assign cat_name = category[0] %}
     <div class="link-category">
-      <h2>{{ category[0] }}</h2>
+      <h2>{{ cat_name }}</h2>
       <div class="link-grid">
         {% for link in category[1] %}
-          {% include link-card.html link=link index=forloop.index0 %}
+          {% include link-card.html link=link index=forloop.index0 link_category=cat_name %}
         {% endfor %}
       </div>
     </div>

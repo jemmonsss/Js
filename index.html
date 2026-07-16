@@ -18,7 +18,7 @@ description: All my links, projects, and ways to support.
       <h2>{{ cat_name }}</h2>
       <div class="link-grid">
         {% for link in category[1] %}
-          {% include link-card.html link=link index=forloop.index0 category=cat_name %}
+          {% include link-card.html link=link index=forloop.index0 link_category=cat_name %}
         {% endfor %}
       </div>
     </div>
