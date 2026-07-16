@@ -1,7 +1,7 @@
 # ---- Core site ----
-title: Your Name
+title: J Emmons
 description: Personal portfolio — links and free/public web tools.
-author: Your Name
+author: J Emmons
 url: "https://jemmonsss.github.io"
 baseurl: "/Js"                  # "" for a user/org site, "/repo" for project site
 lang: en-US
@@ -37,14 +37,14 @@ sitemap:
 
 # ---- SEO / social (consumed by jekyll-seo-tag) ----
 social:
-  name: Your Name
+  name: J Emmons
   links:
-    - https://github.com/yourname
-    - https://www.youtube.com/@yourname
+    - https://github.com/jemmonsss
+    - https://www.youtube.com/@jemmonsss
 
 # jekyll-seo-tag site-wide defaults
 twitter:
-  username: yourname
+  username: jemmonsss
   card: summary_large_image
 logo: /images/logo.png
 og_image: /images/logo.png
@@ -56,7 +56,7 @@ defaults:
       type: projects
     values:
       layout: default
-      image: /images/projects/example-tool.png
+      image: /images/projects/knolagebase.png
 
 # ---- Theme / assets ----
 sass:
