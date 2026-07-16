@@ -13,11 +13,12 @@ description: All my links, projects, and ways to support.
   </div>
 
   {% for category in site.data.links %}
+    {% assign cat_name = category[0] %}
     <div class="link-category">
-      <h2>{{ category[0] }}</h2>
+      <h2>{{ cat_name }}</h2>
       <div class="link-grid">
         {% for link in category[1] %}
-          {% include link-card.html link=link index=forloop.index0 category=category[0] %}
+          {% include link-card.html link=link index=forloop.index0 category=cat_name %}
         {% endfor %}
       </div>
     </div>
