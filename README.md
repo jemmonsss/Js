@@ -42,6 +42,14 @@ Socials:
 Each entry supports one of `icon` (FontAwesome class), `image` (URL), or `svg`
 (raw HTML).
 
+### A project
+
+Copy `templates/project-template.md` to `_projects/<slug>.md` and fill in the
+front matter. The gallery and a per-project page are generated automatically.
+
+The `image` field is **optional**: if omitted, the card embeds a live preview
+(`iframe`) of the project's `url` instead of a screenshot.
+
 ### Redirects (old/renamed URLs)
 
 `jekyll-redirect-from` is enabled. Add to any page/project front matter:

@@ -31,9 +31,11 @@
 
 .project-card .thumb {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  background: var(--bg-elev-2);
+  aspect-ratio:16 / 9;
+  object-fit:cover;
+  background:var(--bg-elev-2);
+  border:none;
+  pointer-events:none;
 }
 
 .project-card .body { padding: 1rem 1.1rem 1.2rem; flex: 1; }

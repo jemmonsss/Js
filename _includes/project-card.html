@@ -1,11 +1,13 @@
-<a class="project-card" href="{{ project.url | relative_url }}"
+<a class="project-card" href="{{ project.url }}"
    data-search="{{ project.title | downcase }} {{ project.tagline | downcase }} {{ project.category | downcase }} {{ project.tags | join: ' ' | downcase }}"
    data-category="{{ project.category | slugify }}">
   {% if project.image %}
     <img class="thumb" src="{{ project.image | relative_url }}" alt="{{ project.title }}" loading="lazy">
+  {% elsif project.url %}
+    <iframe class="thumb" src="{{ project.url }}" title="{{ project.title }}" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
   {% endif %}
   <div class="body">
-    <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+    <h3><a href="{{ project.url }}">{{ project.title }}</a></h3>
     {% if project.tagline %}<p class="tagline">{{ project.tagline }}</p>{% endif %}
     <div class="meta">
       <span class="badge {{ project.status }}">{{ project.status | default: 'live' }}</span>

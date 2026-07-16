@@ -12,7 +12,6 @@ url: https://jemmonsss.github.io/Js-Knolagebase/
 repo: https://github.com/jemmonsss/Js-Knolagebase
 featured: true
 date: 2026-07-16
-image: /images/projects/example-tool.png
 accent: "#a855f7"
 layout: default
 ---
