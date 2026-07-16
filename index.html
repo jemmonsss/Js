@@ -11,14 +11,12 @@ description: All my links, projects, and ways to support.
     <p>{{ site.description }}</p>
   </div>
 
-  {% assign counter = 0 %}
   {% for category in site.data.links %}
     <div class="link-category">
       <h2>{{ category[0] }}</h2>
       <div class="link-grid">
         {% for link in category[1] %}
-          {% include link-card.html link=link index=counter %}
-          {% assign counter = counter | plus: 1 %}
+          {% include link-card.html link=link index=forloop.index0 %}
         {% endfor %}
       </div>
     </div>
