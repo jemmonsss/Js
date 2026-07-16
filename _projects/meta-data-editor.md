@@ -21,8 +21,6 @@ layout: default
   <h1>{{ page.title }}</h1>
   <p class="tagline">{{ page.tagline }}</p>
 
-  {{ content }}
-
   Tweak and inspect metadata without installing anything — just open the page.
 
   <div class="links">

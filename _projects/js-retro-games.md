@@ -21,8 +21,6 @@ layout: default
   <h1>{{ page.title }}</h1>
   <p class="tagline">{{ page.tagline }}</p>
 
-  {{ content }}
-
   Js Retro Games brings old-school classics back to life right in your browser.
 
   <div class="links">

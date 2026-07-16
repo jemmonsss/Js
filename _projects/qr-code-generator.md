@@ -21,8 +21,6 @@ layout: default
   <h1>{{ page.title }}</h1>
   <p class="tagline">{{ page.tagline }}</p>
 
-  {{ content }}
-
   Type, click, and grab your QR code — everything runs locally in the browser.
 
   <div class="links">

@@ -22,8 +22,6 @@ layout: default
   <h1>{{ page.title }}</h1>
   <p class="tagline">{{ page.tagline }}</p>
 
-  {{ content }}
-
   Knolagebase helps you turn scattered notes into a connected, searchable
   knowledge base. Add entries, link related topics, and revisit what you've
   learned — all from a clean, fast web interface.
