@@ -3,13 +3,15 @@
    data-category="{{ project.category | slugify }}">
   {% if project.image %}
     <img class="thumb" src="{{ project.image | relative_url }}" alt="{{ project.title }}" loading="lazy">
-  {% elsif project.url %}
-    {# Live preview only — no scripts, non-interactive (pointer-events:none in CSS).
-       Using only allow-scripts would break many sites; allow-same-origin alone is
-       safe here because the card is display-only and not scripts-dependent.
-       We intentionally do NOT combine allow-scripts + allow-same-origin, which
-       would let the framed page escape its sandbox. #}
-    <iframe class="thumb" src="{{ project.url }}" title="{{ project.title }}" loading="lazy" sandbox="allow-same-origin"></iframe>
+  {% elsif project.live_url %}
+    {# Live preview of the actual external site (live_url).
+       No `sandbox` attribute: a sandbox combining allow-scripts + allow-same-origin
+       triggers an "escape its sandboxing" warning, and allow-same-origin alone
+       blocks the framed site's scripts ("Blocked script execution"). Since this is
+       a first-party preview (your own site under jemmonsss.github.io), we omit
+       the sandbox so scripts run and no console warnings appear. The card itself
+       is non-interactive via `pointer-events:none` in CSS. #}
+    <iframe class="thumb" src="{{ project.live_url }}" title="{{ project.title }}" loading="lazy"></iframe>
   {% endif %}
   <div class="body">
     <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>

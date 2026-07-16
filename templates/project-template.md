@@ -6,11 +6,11 @@ description: >-
 category: Web App
 tags: [free, tool]
 status: live              # live | beta | archived
-url: https://example.com
+live_url: https://example.com   # external live site (iframe preview + "Live site" button)
 repo: https://github.com/yourname/project
 featured: false
 date: 2026-07-16
-image: /images/projects/project.png
+image: /images/projects/project.png   # optional; if omitted, a live <iframe> preview of live_url is shown
 accent: "#a855f7"
 layout: default
 ---

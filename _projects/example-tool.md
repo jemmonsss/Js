@@ -8,12 +8,12 @@ description: >-
 category: Web App
 tags: [free, tool, knowledge, notes]
 status: live              # live | beta | archived
-url: https://jemmonsss.github.io/Js-Knolagebase/
+live_url: https://jemmonsss.github.io/Js-Knolagebase/   # external live site (used for the iframe preview + "Live site" button)
 repo: https://github.com/jemmonsss/Js-Knolagebase
 featured: true
 date: 2026-07-16
-# image field intentionally omitted: the card shows a live <iframe> preview
-# of the actual site (https://jemmonsss.github.io/Js-Knolagebase/).
+# `image` field intentionally omitted: the card shows a live <iframe> preview
+# of the actual site (live_url) instead of a screenshot.
 accent: "#a855f7"
 layout: default
 ---
@@ -29,8 +29,8 @@ layout: default
   learned — all from a clean, fast web interface.
 
   <div class="links">
-    {% if page.url and page.url != empty %}
-      <a class="btn btn-primary" href="{{ page.url }}" target="_blank" rel="noopener">Live site</a>
+    {% if page.live_url and page.live_url != empty %}
+      <a class="btn btn-primary" href="{{ page.live_url }}" target="_blank" rel="noopener">Live site</a>
     {% endif %}
     {% if page.repo %}
       <a class="btn" href="{{ page.repo }}" target="_blank" rel="noopener">Source</a>

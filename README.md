@@ -48,7 +48,8 @@ Copy `templates/project-template.md` to `_projects/<slug>.md` and fill in the
 front matter. The gallery and a per-project page are generated automatically.
 
 The `image` field is **optional**: if omitted, the card embeds a live preview
-(`iframe`) of the project's `url` instead of a screenshot.
+(`iframe`) of the project's `live_url` (the actual external site) instead of a
+screenshot. Use `live_url` for the external site and `repo` for the source.
 
 ### Redirects (old/renamed URLs)
 
