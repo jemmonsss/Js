@@ -9,7 +9,7 @@
 .gallery-grid {
   display: grid;
   gap: 1.25rem;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
   padding-bottom: 1rem;
 }
 
@@ -41,17 +41,17 @@
 .project-card .thumb-stage {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;          /* keep the box a fixed 16:9 card thumbnail */
+  aspect-ratio: 16 / 9;          /* fixed 16:9 thumbnail box at every width */
   overflow: hidden;
   background: var(--bg-elev-2);
   border: none;
-  container-type: inline-size;    /* enables cqw units for the scale below */
+  /* Fallback scale used only if JS hasn't run yet; JS overrides per-card. */
+  --preview-scale: 0.15;
 }
 
-/* Fixed 1920x1080 "desktop" render of the live site, scaled down to fit the
-   card box. 100cqw = the box width; dividing by 1920px gives a unitless
-   scale factor, so the 1920x1080 stage shrinks to the box while the 16:9
-   ratio (and crispness) is preserved at any card size. */
+/* Fixed 1920x1080 "desktop" render of the live site. JS sets --preview-scale
+   = boxWidth / 1920 so it fits the card exactly on ANY device resolution.
+   transform does not affect layout, so overflow:hidden clips it to the box. */
 .project-card .thumb-frame {
   position: absolute;
   top: 0;
@@ -60,7 +60,7 @@
   height: 1080px;
   border: none;
   transform-origin: top left;
-  transform: scale(calc(100cqw / 1920px));
+  transform: scale(var(--preview-scale));
   pointer-events: none;           /* preview is display-only */
 }
 

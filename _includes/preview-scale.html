@@ -1,0 +1,33 @@
+{% comment %} Sets --preview-scale on every .thumb-stage so the fixed
+1920x1080 iframe preview fits the card box exactly, on any device
+resolution. Runs on load, after fonts load, and on resize. {% endcomment %}
+<script>
+(function () {
+  var STAGE_W = 1920;
+  function scalePreviews() {
+    var stages = document.querySelectorAll('.thumb-stage');
+    for (var i = 0; i < stages.length; i++) {
+      var stage = stages[i];
+      var w = stage.clientWidth || 0;
+      if (w > 0) {
+        stage.style.setProperty('--preview-scale', (w / STAGE_W).toString());
+      }
+    }
+  }
+  function schedule() {
+    scalePreviews();
+    // re-run once layout/fonts settle
+    requestAnimationFrame(scalePreviews);
+    setTimeout(scalePreviews, 300);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', schedule);
+  } else {
+    schedule();
+  }
+  window.addEventListener('resize', scalePreviews);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(scalePreviews);
+  }
+})();
+</script>
