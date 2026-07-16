@@ -4,7 +4,12 @@
   {% if project.image %}
     <img class="thumb" src="{{ project.image | relative_url }}" alt="{{ project.title }}" loading="lazy">
   {% elsif project.url %}
-    <iframe class="thumb" src="{{ project.url }}" title="{{ project.title }}" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe>
+    {# Live preview only — no scripts, non-interactive (pointer-events:none in CSS).
+       Using only allow-scripts would break many sites; allow-same-origin alone is
+       safe here because the card is display-only and not scripts-dependent.
+       We intentionally do NOT combine allow-scripts + allow-same-origin, which
+       would let the framed page escape its sandbox. #}
+    <iframe class="thumb" src="{{ project.url }}" title="{{ project.title }}" loading="lazy" sandbox="allow-same-origin"></iframe>
   {% endif %}
   <div class="body">
     <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
